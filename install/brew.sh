@@ -12,11 +12,18 @@ brew upgrade
 # Install packages
 
 apps=(
+  awscli
   bash-completion2
   bats
   battery
   coreutils
   diff-so-fancy
+  docker-completion
+  docker-compose
+  docker-compose-completion
+  docker-credential-helper
+  docker-credential-helper-ecr
+  docker-ls
   dockutil
   ffmpeg
   fasd
@@ -41,6 +48,7 @@ apps=(
   unar
   wget
   wifi-password
+  yarn --without-node
 )
 
 brew install "${apps[@]}"
