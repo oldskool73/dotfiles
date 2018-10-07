@@ -40,6 +40,7 @@ apps=(
   nano
   pandoc
   peco
+  php
   psgrep
   python
   shellcheck
