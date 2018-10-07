@@ -1,9 +1,9 @@
 [user]
-  name = Lars Kappert
-  email = lars@webpro.nl
+	name = Adam Robertson
+	email = adam.robertson@imagination.com
 
 [github]
-  user = webpro
+  user = oldskool73
 
 [core]
   excludesfile = ~/.gitignore_global
