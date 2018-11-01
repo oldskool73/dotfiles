@@ -16,6 +16,7 @@ apps=(
   bash-completion2
   bats
   battery
+  consul
   coreutils
   diff-so-fancy
   docker-completion
@@ -38,13 +39,16 @@ apps=(
   lynx
   mackup
   nano
+  nomad
   pandoc
   peco
   php
   psgrep
   python
+  redis
   shellcheck
   ssh-copy-id
+  terraform
   tree
   unar
   wget

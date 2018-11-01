@@ -10,7 +10,8 @@ brew tap caskroom/fonts
 # Install packages
 
 apps=(
-  dash2
+  dash3
+  diffmerge
   dropbox
   docker
   firefox
@@ -22,10 +23,14 @@ apps=(
   kaleidoscope
   macdown
   opera
+  postman
   screenflow
+  sequel-pro
   slack
   sourcetree
   spectacle
+  vagrant
+  virtualbox
   visual-studio-code
   vlc
 )
