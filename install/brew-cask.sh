@@ -10,6 +10,7 @@ brew tap caskroom/fonts
 # Install packages
 
 apps=(
+  1password
   dash3
   diffmerge
   dropbox
@@ -20,6 +21,7 @@ apps=(
   glimmerblocker
   google-chrome
   hammerspoon
+  iterm2
   kaleidoscope
   macdown
   opera

@@ -21,7 +21,6 @@ apps=(
   diff-so-fancy
   docker-completion
   docker-compose
-  docker-compose-completion
   docker-credential-helper
   docker-credential-helper-ecr
   docker-ls

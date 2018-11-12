@@ -1,9 +1,10 @@
+
 # setup zsh & oh-my-zsh with antigen
 source /usr/local/share/antigen/antigen.zsh
 antigen use oh-my-zsh
-
 # load zsh bundles
 export NVM_LAZY_LOAD=true
+export NVM_DIR=$(brew --prefix nvm)
 antigen bundle lukechilds/zsh-nvm
 
 antigen bundle aws

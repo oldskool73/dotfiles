@@ -27,6 +27,9 @@ DOTFILES_CACHE="$DOTFILES_DIR/.cache.sh"
 
 # Finally we can source the dotfiles (order matters)
 
+for DOTFILE in "$DOTFILES_DIR"/system/.{function,function_*,path}; do
+  [ -f "$DOTFILE" ] && . "$DOTFILE"
+done
 for DOTFILE in "$DOTFILES_DIR"/system/.{antigen,env}.z; do
   [ -f "$DOTFILE" ] && . "$DOTFILE"
 done
