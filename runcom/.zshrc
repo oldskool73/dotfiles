@@ -30,6 +30,11 @@ DOTFILES_CACHE="$DOTFILES_DIR/.cache.sh"
 for DOTFILE in "$DOTFILES_DIR"/system/.{function,function_*,path}; do
   [ -f "$DOTFILE" ] && . "$DOTFILE"
 done
+if is-macos; then
+  for DOTFILE in "$DOTFILES_DIR"/system/.{env,alias,function}.macos; do
+    [ -f "$DOTFILE" ] && . "$DOTFILE"
+  done
+fi
 for DOTFILE in "$DOTFILES_DIR"/system/.{antigen,env}.z; do
   [ -f "$DOTFILE" ] && . "$DOTFILE"
 done
