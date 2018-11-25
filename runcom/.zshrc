@@ -38,7 +38,7 @@ if is-macos; then
   done
 fi
 #echo "loading zsh"
-for DOTFILE in "$DOTFILES_DIR"/system/.{alias,env,antigen}.z; do
+for DOTFILE in "$DOTFILES_DIR"/system/.{alias,env,antigen,rvm}.z; do
   [ -f "$DOTFILE" ] && . "$DOTFILE"
 done
 
