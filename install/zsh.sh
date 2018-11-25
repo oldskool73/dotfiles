@@ -16,3 +16,6 @@ brew cask install font-powerline-symbols \
   font-source-code-pro-for-powerline \
   font-menlo-for-powerline \
   font-roboto-mono-for-powerline
+
+# use zsh as shell
+chsh -s /bin/zsh
