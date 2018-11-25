@@ -19,9 +19,7 @@ antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # zsh theme
-#antigen theme robbyrussell
-antigen theme candy
-#antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
+antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 
 # apply antigen config
 antigen apply

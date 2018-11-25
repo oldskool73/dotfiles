@@ -15,18 +15,18 @@ is-executable hub && eval "$(hub alias -s)" # alias git=hub
 
 # Global aliases
 
-if $(is-supported "alias -g"); then
-  alias -g G="| grep -i"
-  alias -g H="| head"
-  alias -g T="| tail"
-  alias -g L="| less"
-fi
+#if $(is-supported "alias -g"); then
+#  alias -g G="| grep -i"
+#  alias -g H="| head"
+#  alias -g T="| tail"
+#  alias -g L="| less"
+#fi
 
 # List declared aliases, functions, paths
 
-alias aliases="alias | sed 's/=.*//'"
-alias functions="declare -f | grep '^[a-z].* ()' | sed 's/{$//'"
-alias paths='echo -e ${PATH//:/\\n}'
+#alias aliases="alias | sed 's/=.*//'"
+#alias functions="declare -f | grep '^[a-z].* ()' | sed 's/{$//'"
+#alias paths='echo -e ${PATH//:/\\n}'
 
 # Directory listing/traversal
 
@@ -79,4 +79,4 @@ alias hosts="sudo $EDITOR /etc/hosts"
 alias his="historie"
 alias quit="exit"
 alias week="date +%V"
-alias speedtest="wget -O /dev/null http://speed.transip.nl/100mb.bin"
+alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"

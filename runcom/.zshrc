@@ -26,16 +26,19 @@ DOTFILES_CACHE="$DOTFILES_DIR/.cache.sh"
 [ -f "$DOTFILES_CACHE" ] && . "$DOTFILES_CACHE"
 
 # Finally we can source the dotfiles (order matters)
-
-for DOTFILE in "$DOTFILES_DIR"/system/.{function,function_*,grep,path}; do
+export EDITOR="nano"
+#echo "loading defaults"
+for DOTFILE in "$DOTFILES_DIR"/system/.{function,function_*,path,alias,grep}; do
   [ -f "$DOTFILE" ] && . "$DOTFILE"
 done
+#echo "loading osx"
 if is-macos; then
   for DOTFILE in "$DOTFILES_DIR"/system/.{env,alias,function}.macos; do
     [ -f "$DOTFILE" ] && . "$DOTFILE"
   done
 fi
-for DOTFILE in "$DOTFILES_DIR"/system/.{antigen,env,alias}.z; do
+#echo "loading zsh"
+for DOTFILE in "$DOTFILES_DIR"/system/.{alias,env,antigen}.z; do
   [ -f "$DOTFILE" ] && . "$DOTFILE"
 done
 
