@@ -23,6 +23,7 @@ apps=(
   hammerspoon
   iterm2
   kaleidoscope
+  kitematic
   macdown
   opera
   postman
