@@ -3,15 +3,18 @@
 source /usr/local/share/antigen/antigen.zsh
 antigen use oh-my-zsh
 # load zsh bundles
-export NVM_LAZY_LOAD=true
-export NVM_DIR=$(brew --prefix nvm)
+if is-macos -a is-executable brew; then
+  export NVM_LAZY_LOAD=true
+  export NVM_DIR=$(brew --prefix nvm)
+fi
 antigen bundle lukechilds/zsh-nvm
 
 antigen bundle aws
 antigen bundle composer
-antigen bundle gitfast  
 antigen bundle docker
 antigen bundle docker-compose
+antigen bundle gitfast  
+antigen bundle zdharma/zsh-diff-so-fancy
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
 

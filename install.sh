@@ -26,7 +26,10 @@ ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
 
 # Package managers & packages
 
+. "$DOTFILES_DIR/install/python.sh"
 . "$DOTFILES_DIR/install/brew.sh"
+. "$DOTFILES_DIR/install/apt.sh"
+. "$DOTFILES_DIR/install/apt-apps.sh"
 . "$DOTFILES_DIR/install/npm.sh"
 . "$DOTFILES_DIR/install/bash.sh"
 . "$DOTFILES_DIR/install/brew-cask.sh"
@@ -43,3 +46,5 @@ if is-executable bats; then bats test/*.bats; else echo "Skipped: tests (missing
 if [ -d "$DOTFILES_EXTRA_DIR" -a -f "$DOTFILES_EXTRA_DIR/install.sh" ]; then
   . "$DOTFILES_EXTRA_DIR/install.sh"
 fi
+
+echo "Complete, please restart your shell!"

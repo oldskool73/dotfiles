@@ -68,7 +68,7 @@ alias ipl="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([
 
 # Request using GET, POST, etc. method
 
-for METHOD in GET HEAD POST PUT DELETE TRACE OPTIONS; do
+for METHOD in GET HEAD POST PUT DELETE OPTIONS; do
   alias "$METHOD"="lwp-request -m '$METHOD'"
 done
 unset METHOD

@@ -1,16 +1,16 @@
-if ! is-executable brew -o ! is-executable git; then
-  echo "Skipped: npm (missing: brew and/or git)"
-  return
+
+if is-macos ; then
+  brew install nvm
+  export DOTFILES_BREW_PREFIX_NVM=$(brew --prefix nvm)
+  set-config "DOTFILES_BREW_PREFIX_NVM" "$DOTFILES_BREW_PREFIX_NVM" "$DOTFILES_CACHE"
+  . "${DOTFILES_DIR}/system/.nvm"
+else
+  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
 fi
 
-brew install nvm
-
-export DOTFILES_BREW_PREFIX_NVM=$(brew --prefix nvm)
-set-config "DOTFILES_BREW_PREFIX_NVM" "$DOTFILES_BREW_PREFIX_NVM" "$DOTFILES_CACHE"
-
-. "${DOTFILES_DIR}/system/.nvm"
-nvm install 8
-nvm alias default 8
+nvm install node && nvm use node
 
 # Globally install with npm
 
